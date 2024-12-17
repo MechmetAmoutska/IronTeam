@@ -17,12 +17,12 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("GAME OVER");
+        gameUI_Manager.ShowGameOverUI();
     }
 
     public void  GameIsFinished()
     {
-        Debug.Log("GAME IS FINISHED");
+        gameUI_Manager.ShowGameIsFinishedUI();
     }
 
     void Update()
@@ -42,7 +42,8 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToTheMainMenu()
     {
-
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Restart()

@@ -69,12 +69,22 @@ public class GameUI_Manager : MonoBehaviour
 
     public void Button_MainMenu()
     {
-
+        GM.ReturnToTheMainMenu();
     }
 
     public void Button_Restart()
     {
         GM.Restart();
+    }
+
+    public void ShowGameOverUI()
+    {
+        SwitchUIState(GameUI_State.GameOver);
+    }
+
+    public void ShowGameIsFinishedUI()
+    {
+        SwitchUIState(GameUI_State.GameIsFinished);
     }
 
 }
